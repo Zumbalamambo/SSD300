@@ -27,9 +27,9 @@ from model.default_box import *
 
 
 # ====================== Training Parameters ====================== #
-BATCH_SIZE = 20
-BATCH = int(4592 / BATCH_SIZE)
-EPOCH = 30
+BATCH_SIZE = 1
+BATCH = 10
+EPOCH = 50
 MINIBATCH = []
 EPOCH_LOSSES = []
 BATCH_LOSSES = []
@@ -86,7 +86,7 @@ with tf.Session() as sess:
             negatives = []
             ex_gt_labels = []
             ex_gt_boxes = []
-            indicies = np.random.choice(len(keys), BATCH_SIZE)
+            indicies = np.random.choice(10, BATCH_SIZE)
             # ===================== END ===================== #
 
             # call prepare_loss per image
